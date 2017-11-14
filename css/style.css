@@ -1,0 +1,219 @@
+/* 
+Style du reset
+*/
+    /* Supprimer toutes les marges de toutes les balises */
+    *{
+        margin: 0;
+        padding: 0;
+
+        /* Intégrer les paddinf et les borders dans la taille des blocs */
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    /* Configuration du Responsive Design */
+    html{
+        font-size: 62.5%; /* 1rem = 1rem */
+    }
+
+    body{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Aligner les balises LI */
+    li{
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+    }
+/**/
+
+
+/* 
+Style header
+*/
+    /* Figer le header en haut à gauche de la page HTML */
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        /* Gestion des couches (cf. claques Photoshop) */
+        z-index: 1000;
+    }
+
+    header, footer{
+        /* Le texte est en blanc */
+        color: white;
+
+        /* Ajouter une image de fond */
+        background-image: url('../img/back.jpg');
+
+        padding: 2rem;
+    }
+
+    /* Sélectionner une balise par sa classe */
+    .siteLogo{
+        font-size: 3rem;
+        display: block;
+    }
+
+    nav, footer ul, main {
+        /* Définir une largeur maximale */
+        max-width: 90rem;
+
+        /* Centrer une balise de type block réduite en largeur */
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+        margin: 2rem auto;
+    }
+/**/
+
+/* 
+Style Main
+*/
+    main {
+        padding: 2rem;
+    }
+
+    /* Sélectionner une balise par son ID */
+    #profilPicture{
+
+        /* Arrondir le bloc */
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+
+        width: 10rem;
+        height: 10rem;
+
+        margin-bottom: 2rem;
+    }
+
+    section{
+        padding-top: 12rem;
+    }
+
+    figure {
+        margin-bottom: 1rem;
+
+        /* Bloquer les enfants dans le parent */
+        position: relative;
+    }
+
+    figcaption{
+        /* Sortir les balises du flux pour le replacer */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+
+        /* Couleur de fond à 70% d'opacité */
+        background-color: rgba(255, 255, 255, .7);
+    }
+
+    input, textarea{
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: #eee;
+        border: none;
+    }
+
+    textarea{
+        min-height: 15rem;
+    }
+
+    button{
+        background-color: #0b0b2f;
+        border: none;
+        color: white;
+        padding: 1rem;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    iframe{
+        height: 28rem;
+        width: 100%;
+        border: none;
+    }
+/* */
+
+/* 
+Requêtes média
+*/
+
+    @media all and (min-width: 700px){
+
+        body{
+            text-align: left;
+        }
+
+        header{
+            position: relative;
+        }
+
+        .siteLogo{
+            display: inline-block;
+        }
+
+        #profilPicture {
+            float: left;
+            width: 8rem;
+            height: 8rem;
+            margin-right: 2rem;
+        }
+
+        #aboutSection p, figure, form, iframe{
+            display: inline-block;
+            width: 48%;
+            vertical-align: top;
+        }
+
+        figure{
+            width: 24%;
+        }
+
+        section {
+            padding-top: 5rem;
+        }
+
+        #homeSection{
+            padding-top: 0;
+        }
+
+        #aboutSection p:nth-of-type(2), iframe{
+            border-left: 2rem solid white;
+        }
+         
+    } /* Fin de la requête média */
+
+
+
+/**/
